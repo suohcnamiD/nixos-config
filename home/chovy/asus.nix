@@ -14,7 +14,4 @@
 
   # home-manager version — like system.stateVersion, set this once and never change it.
   home.stateVersion = "26.05";
-
-  # This line lets home-manager manage its own configuration and updates.
-  programs.home-manager.enable = true;
 }

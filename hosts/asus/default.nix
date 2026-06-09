@@ -44,7 +44,7 @@
   };
 
   # ── Users ─────────────────────────────────────────────────────────────────
-  users.users.alice = {
+  users.users.chovy = {
     isNormalUser = true;
     extraGroups  = [ "wheel" "networkmanager" ];  # "wheel" grants sudo access
     shell        = pkgs.bash;
