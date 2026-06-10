@@ -1,14 +1,5 @@
 { config, pkgs, pkgs-unstable, lib, ... }: 
 
-let
-  ulauncherLiquidGlass = pkgs.fetchFromGitHub {
-    owner  = "kayozxo";
-    repo   = "ulauncher-liquid-glass";
-    rev    = "e8fc1ef2aa137d177202a0c26d23ed2ef82db8d4";
-    sha256 = "sha256-arWNy69rmZvHhWWxqBuJxg6+B1YM1iFOoW734j6VCxs=";
-  };
-in
-
 {
 
   imports = [
@@ -39,12 +30,6 @@ in
   # home-manager version — like system.stateVersion, set this once and never change it.
   home.stateVersion = "26.05";
 
-  home.activation.ulauncherTheme = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    mkdir -p "$HOME/.config/ulauncher/user-themes"
-    cp -r --no-preserve=mode ${ulauncherLiquidGlass}/liquid-glass-dark \
-      "$HOME/.config/ulauncher/user-themes/liquid-glass-dark"
-  '';
-
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
@@ -68,6 +53,10 @@ in
       brightness = 0.6;
       sigma = 30;
     };
+  };
+
+  home.sessionVariables = {
+  	XDG_DATA_DIRS = "/run/current-system/sw/share:$XDG_DATA_DIRS";
   };
 
   dconf.settings = {

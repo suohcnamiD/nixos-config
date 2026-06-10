@@ -1,9 +1,13 @@
 {
 	programs.git = {
 		enable = true;
-		extraConfig = {
+		settings = {
 			"credential \"https://github.com\"".helper = 
 				"!f() { echo password=$(cat /run/secrets/git/github/token); echo username=$(cat /run/secrets/git/github/username); }; f";
+		};
+		settings.user = {
+			name = "Chovy";
+			email = "veryverychovy@proton.me";
 		};
 	};
 }

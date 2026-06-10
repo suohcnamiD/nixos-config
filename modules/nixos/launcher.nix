@@ -3,6 +3,8 @@
     wmctrl
     ulauncher
   ];
+
+  
   systemd.user.services.ulauncher = {
     description = "Ulauncher application launcher";
     after = [ "graphical-session.target" ];
@@ -11,6 +13,10 @@
     serviceConfig = {
       ExecStart = "${pkgs.ulauncher}/bin/ulauncher --hide-window";
       Restart = "on-failure";
+      Environment = [
+        "BROWSER=${pkgs.firefox}/bin/firefox"
+        "XDG_DATA_DIRS=/run/current-system/sw/share:/home/chovy/.nix-profile/share"
+      ];
     };
   };
 }
