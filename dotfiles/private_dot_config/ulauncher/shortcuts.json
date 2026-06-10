@@ -1,0 +1,32 @@
+{
+    "d01899a3-67ff-4ff8-adfb-5e15b0a06e84": {
+        "id": "d01899a3-67ff-4ff8-adfb-5e15b0a06e84",
+        "name": "Search",
+        "keyword": "g",
+        "cmd": "https://ecosia.com/search?q=%s",
+        "icon": "/nix/store/001h3m2api27kbbjdq7l1r37y35j3avb-ulauncher-5.15.7/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1781112312.0878859
+    },
+    "c9935825-a31b-488f-94b3-36a0417a1933": {
+        "id": "c9935825-a31b-488f-94b3-36a0417a1933",
+        "name": "Terminal",
+        "keyword": "cmd",
+        "cmd": "kgx",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781113431.5936189
+    },
+    "d581c76f-6a59-42a2-8c6e-fbf2e1570c13": {
+        "id": "d581c76f-6a59-42a2-8c6e-fbf2e1570c13",
+        "name": "Rebuild with Flake",
+        "keyword": "rebuild",
+        "cmd": "sudo nixos-rebuild switch --flake ~/nixos-config#asus",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781113873.1208668
+    }
+}
