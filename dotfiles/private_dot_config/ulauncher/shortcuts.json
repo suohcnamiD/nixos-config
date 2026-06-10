@@ -18,15 +18,5 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781113431.5936189
-    },
-    "d581c76f-6a59-42a2-8c6e-fbf2e1570c13": {
-        "id": "d581c76f-6a59-42a2-8c6e-fbf2e1570c13",
-        "name": "Rebuild with Flake",
-        "keyword": "rebuild",
-        "cmd": "sudo nixos-rebuild switch --flake ~/nixos-config#asus",
-        "icon": null,
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1781113873.1208668
     }
 }
