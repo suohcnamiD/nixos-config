@@ -54,7 +54,7 @@
             # Load your home-manager config for user "alice".
             # "import" here evaluates the file and hands the resulting function
             # to home-manager, which then calls it with the right arguments.
-            home-manager.users.chovy = import ./home/chovy/asus.nix;
+            home-manager.users.chovy = import ./home/chovy/default.nix;
           }
         ];
       };

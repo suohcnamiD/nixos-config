@@ -1,10 +1,13 @@
 { config, pkgs, ... }: {
-  imports = [ 
+  imports = [
+    ./appearance.nix 
     ./development.nix
     ./gnome.nix
     ./browser.nix
     ./networking.nix
-    ./launcher.nix 
+    ./launcher.nix
+    ./social.nix
+    ./security.nix 
   ];
   environment.systemPackages = with pkgs; [
     wget
