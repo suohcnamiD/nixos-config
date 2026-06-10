@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   services.ssh-agent.enable = true;
-  programs.ssh.enableDefaultConfig = true;
-  programs.ssh.settings = {
+  programs.ssh.enableDefaultConfig = false;
+  programs.ssh = {
   	enable = true;
   	settings = {
  	  "stachetopia" = {

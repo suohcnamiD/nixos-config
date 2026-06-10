@@ -15,6 +15,7 @@
     curl 
     git
     wl-clipboard
+    gst_all_1.gstreamer
   ];
   nixpkgs.config.allowUnfree = true;
 }
