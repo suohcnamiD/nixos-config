@@ -43,7 +43,7 @@ Use `chezmoi` to add new dotfiles:
 
     chezmoi add ~/.config/something/myfile.json
     
-Don't forget to stage and commit the new file that `chezmoi` generates for you under `~/.local/...` (the full path does not matter).
+Because of our custom setup, Chezmoi will generate the tracked file directly inside your monorepo at `~/nixos-config/dotfiles/`. Remember to stage, commit, and push those changes inside your ~`/nixos-config` directory.
 
 # Editing dotfiles
 Use `chezmoi edit` for first-class dotfile edit support:
