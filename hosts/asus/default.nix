@@ -20,6 +20,16 @@
   	owner = "chovy";
   	mode = "0600";
   };
+  
+  sops.secrets."git/github/username" = {
+  	owner = "chovy";
+  	mode = "0600";
+  };
+  
+  sops.secrets."git/github/token" = {
+  	owner = "chovy";
+  	mode = "0600";
+  };
 
   sops.age.keyFile = "/home/chovy/.config/sops/age/keys.txt";
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
