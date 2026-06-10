@@ -3,7 +3,7 @@
 		enable = true;
 		extraConfig = {
 			"credential \"https://github.com\"".helper = 
-				"!f() { echo password=$*(cat /run/secrets/git/stachetopia/token); }; f";
+				"!f() { echo password=$(cat /run/secrets/git/github/token); echo username=$(cat /run/secrets/git/github/username); }; f";
 		};
 	};
 }
