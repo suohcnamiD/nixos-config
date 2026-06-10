@@ -2,8 +2,9 @@
 Hi, this is my NixOS monorepo with a flake, .nix files and dotfiles. Dotfiles are managed by `chezmoi`.
 
 # Applying
-## 1. Clone the repo into `~/nixos-config`:
-	```
+## 1. Clone the repo into `~/nixos-config`
+	```bash
+	
 	git clone https://github.com/suohcnamiD/nixos-config ~/nixos-config
 	cd ~/nixos-config
 	```
