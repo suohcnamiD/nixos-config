@@ -19,4 +19,16 @@
     libnotify
   ];
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    (final: prev: {
+      ulauncher = prev.ulauncher.overrideAttrs (oldAttrs: {
+        # This appends 'pint' right into Ulauncher's internal Python path
+        propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
+          final.python3Packages.pint
+          final.python3Packages.simpleeval
+        ];
+      });
+    })
+  ];
+
 }
