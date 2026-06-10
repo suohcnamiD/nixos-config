@@ -16,6 +16,7 @@
     git
     wl-clipboard
     gst_all_1.gstreamer
+    libnotify
   ];
   nixpkgs.config.allowUnfree = true;
 }

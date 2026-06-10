@@ -2,7 +2,7 @@
 
 echo "========== Starting NixOS Rebuild =========="
 # This forces the terminal to ask for your sudo password safely inside the window
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --flake ~/nixos-config#asus
 
 # Check if the previous command succeeded
 if [ $? -eq 0 ]; then
