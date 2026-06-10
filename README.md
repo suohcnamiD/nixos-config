@@ -60,6 +60,8 @@ If a dotfile has to access SOPS secrets - `sops-nix` decrypts and loads them aut
 1. Make sure the chezmoi file is a template (refer to chezmoi docs)
 2. Inject the value via `include`:
 
-    `{
-		"some_key": "{{ include "/run/secrets/ulauncher_key" | trim }}"
-	}`
+```
+{
+	"some_key": "{{ include "/run/secrets/ulauncher_key" | trim }}"
+}
+```
