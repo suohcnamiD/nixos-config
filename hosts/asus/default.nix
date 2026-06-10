@@ -15,6 +15,15 @@
     ../../modules/nixos
   ];
 
+  sops.secrets."ssh/stachetopia" = {
+  	path = "/home/chovy/.ssh/stachetopia";
+  	owner = "chovy";
+  	mode = "0600";
+  };
+
+  sops.age.keyFile = "/home/chovy/.config/sops/age/keys.txt";
+  sops.defaultSopsFile = ../../secrets/secrets.yaml;
+  
   # ── Boot ──────────────────────────────────────────────────────────────────
   boot.loader.systemd-boot.enable      = true;
   boot.loader.efi.canTouchEfiVariables = true;

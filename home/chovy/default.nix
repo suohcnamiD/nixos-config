@@ -13,7 +13,15 @@ in
 
   imports = [
     ./gaming.nix
+    ./ssh.nix
   ];
+
+  xdg.configFile."micro/settings.json" = {
+  	force = true;
+  	text = builtins.toJSON {
+  	  clipboard = "external";	
+  	};
+  };
 
   # These must match your actual username and home directory path.
   home.username      = "chovy";
@@ -64,13 +72,21 @@ in
   dconf.settings = {
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
-        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ulauncher/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gpaste/"
       ];
     };
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+    
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ulauncher" = {
       binding = "<Control>space";
       command = "ulauncher-toggle";
       name = "Open Ulauncher";
+    };
+    
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/gpaste" = {
+      binding = "<Super>v";
+      command = "gpaste-client ui";
+      name = "Open GPaste";
     };
   };
 
