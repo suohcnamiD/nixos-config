@@ -32,3 +32,18 @@ Run this to apply the dotfiles:
 	chezmoi apply
 
 Now you have the whole system!
+
+# Adding dotfiles
+Use `chezmoi` to add new dotfiles: 
+
+    chezmoi add ~/.config/something/myfile.json
+    
+Don't forget to stage and commit the new file that `chezmoi` generates for you under `~/.local/...` (the full path does not matter).
+
+# Editing dotfiles
+Use `chezmoi edit` for first-class dotfile edit support:
+
+	chezmoi edit ~/.config/something/myfile.json
+
+Commit and push afterwards.
+If you want to just persist your current system changes of a file into the chezmoi repo, just use `chezmoi add` on it again. If the file is a template, you have to use `chezmoi merge` though - refer to chezmoi docs.
