@@ -53,3 +53,12 @@ Use `chezmoi edit` for first-class dotfile edit support:
 Commit and push afterwards.
 
 If you want to just persist your current system changes of a file into the chezmoi repo, just use `chezmoi add` on it again. If the file is a template, you have to use `chezmoi merge` though - refer to chezmoi docs.
+
+# Note on SOPS secrets
+If a dotfile has to access SOPS secrets - `sops-nix` decrypts and loads them automatically into `/run/secrets/...` (check for .nix files regarding secrets). To use them in a chezmoi file, you:
+
+	1. Make sure the chezmoi file is a template (refer to chezmoi docs)
+	2. Inject the value via `include`: 
+	    {
+		    "some_key": "{{ include "/run/secrets/ulauncher_key" | trim }}"
+		}
