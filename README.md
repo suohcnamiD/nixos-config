@@ -1,7 +1,7 @@
-= Intro
+# Intro
 Hi, this is my NixOS monorepo with a flake, .nix files and dotfiles. Dotfiles are managed by `chezmoi`.
 
-= Applying
+# Applying
 1. Clone the repo into `~/nixos-config`:
 	```
 	git clone https://github.com/suohcnamiD/nixos-config ~/nixos-config
