@@ -4,7 +4,9 @@
   	enable = true;
   	addKeysToAgent = "yes";
   	matchBlocks = {
- 	  "135.181.177.107" = {
+ 	  "stachetopia" = {
+ 	  	hostname = "135.181.177.107";
+ 	  	user = "root";
  		identityFile = "~/.ssh/stachetopia";
 	  };
   	};
