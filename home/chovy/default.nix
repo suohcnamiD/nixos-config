@@ -14,6 +14,7 @@ in
   imports = [
     ./gaming.nix
     ./ssh.nix
+    ./git.nix
   ];
 
   xdg.configFile."micro/settings.json" = {
