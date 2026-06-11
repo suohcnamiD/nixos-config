@@ -48,5 +48,35 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781164511.6499681
+    },
+    "a3344ab8-13fe-4256-96a2-d42472891b4d": {
+        "id": "a3344ab8-13fe-4256-96a2-d42472891b4d",
+        "name": "Moodle",
+        "keyword": "moodle",
+        "cmd": "https://moodle.dhbw.de/my/courses.php",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781166090.7238352
+    },
+    "a81f8245-1e7b-41f6-a0e8-9d77b073bd0d": {
+        "id": "a81f8245-1e7b-41f6-a0e8-9d77b073bd0d",
+        "name": "Moodle: Theo",
+        "keyword": "moodle-theo",
+        "cmd": "https://moodle.dhbw.de/course/view.php?id=15151",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781166113.8623314
+    },
+    "e5f39679-e7e9-4269-8a49-bc5b5122617d": {
+        "id": "e5f39679-e7e9-4269-8a49-bc5b5122617d",
+        "name": "Commit Shortcuts to chezmoi",
+        "keyword": "commit-shortcuts",
+        "cmd": "chezmoi add ~/.config/ulauncher/shortcuts.json",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781166378.0822837
     }
 }
