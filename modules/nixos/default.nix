@@ -14,7 +14,6 @@
     wget
     curl 
     git
-    wl-clipboard
     gst_all_1.gstreamer
     libnotify
   ];
