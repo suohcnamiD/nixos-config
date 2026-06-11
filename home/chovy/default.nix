@@ -6,6 +6,7 @@
     ./gaming.nix
     ./ssh.nix
     ./git.nix
+    ./sops.nix
   ];
 
   xdg.configFile."micro/settings.json" = {

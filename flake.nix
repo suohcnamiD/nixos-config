@@ -45,16 +45,18 @@
           sops-nix.nixosModules.sops
           home-manager.nixosModules.home-manager
           {
-            # useGlobalPkgs: home-manager uses the same pkgs as the system
             home-manager.useGlobalPkgs   = true;
-            # useUserPackages: user packages appear in /etc/profiles, not ~/.nix-profile
             home-manager.useUserPackages = true;
-            # Pass pkgs-unstable and inputs into home-manager modules too
             home-manager.extraSpecialArgs = { inherit inputs pkgs-unstable; };
-            # Load your home-manager config for user "alice".
+            
             # "import" here evaluates the file and hands the resulting function
             # to home-manager, which then calls it with the right arguments.
-            home-manager.users.chovy = import ./home/chovy/default.nix;
+            home-manager.users.chovy = {
+              imports = [
+                inputs.sops-nix.homeManagerModules.sops
+                ./home/chovy/default.nix
+              ];
+            };
           }
         ];
       };
