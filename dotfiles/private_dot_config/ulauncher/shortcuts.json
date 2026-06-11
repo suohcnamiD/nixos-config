@@ -18,5 +18,25 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781113431.5936189
+    },
+    "66c0f8f4-b528-40ae-9ce8-140e71a473db": {
+        "id": "66c0f8f4-b528-40ae-9ce8-140e71a473db",
+        "name": "Rebuild",
+        "keyword": "rebuild",
+        "cmd": "kgx -- /home/chovy/nixos-config/dotfiles/bin/rebuild-ui.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781121147.7553272
+    },
+    "80d4feea-c31e-4605-be4d-c195ba76aea8": {
+        "id": "80d4feea-c31e-4605-be4d-c195ba76aea8",
+        "name": "Zuckerberg Malware (WhatsApp)",
+        "keyword": "wha",
+        "cmd": "https://web.whatsapp.com/",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781122795.4638653
     }
 }
