@@ -31,4 +31,13 @@
     })
   ];
 
+  # Fix for copilot in IDEA not working - something with unpatched dynamic binaries
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries here if Copilot complains later
+    stdenv.cc.cc
+    zlib
+    glibc
+  ];
+
 }

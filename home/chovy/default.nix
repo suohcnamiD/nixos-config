@@ -8,6 +8,8 @@
     ./git.nix
     ./sops.nix
     ./development.nix
+    ./convenience.nix
+    ./appearance.nix
     ./gradle.nix
   ];
 
@@ -35,30 +37,6 @@
 
   services.mako.enable = true;
 
-  dconf.settings = {
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [ pkgs.gnomeExtensions.blur-my-shell.extensionUuid ];
-    };
-
-    "org/gnome/shell/extensions/blur-my-shell" = {
-      brightness = 0.6;
-      sigma = 30;
-    };
-
-    "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      blur = true;
-      brightness = 0.6;
-      sigma = 30;
-    };
-
-    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
-      blur = true;
-      static-blur = true;
-      brightness = 0.6;
-      sigma = 30;
-    };
-  };
 
   home.sessionVariables = {
   	XDG_DATA_DIRS = "/run/current-system/sw/share:$XDG_DATA_DIRS";
