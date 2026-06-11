@@ -1,0 +1,16 @@
+{
+    "com.github.no-faff.ulauncher-calculate-anything": {
+        "id": "com.github.no-faff.ulauncher-calculate-anything",
+        "url": "https://github.com/no-faff/ulauncher-calculate-anything",
+        "updated_at": "2026-06-10T19:53:32.392553",
+        "last_commit": "536cccd99f65dc92e108e2d343a40bae3d536770",
+        "last_commit_time": "2026-06-01T13:58:57"
+    },
+    "com.github.claudiosanches.ulauncher-gnome-session-actions": {
+        "id": "com.github.claudiosanches.ulauncher-gnome-session-actions",
+        "url": "https://github.com/claudiosanches/ulauncher-gnome-session-actions",
+        "updated_at": "2026-06-11T09:17:39.796203",
+        "last_commit": "c4c051395e5db927584639f3b62a4038f311a99d",
+        "last_commit_time": "2026-05-02T17:08:05"
+    }
+}
