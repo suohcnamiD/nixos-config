@@ -30,6 +30,7 @@
     fd         # better find — find files with fd
     bat        # better cat — view files with syntax highlighting
     htop       # interactive process viewer
+    btop 	   # an even better one xd
   ];
 
   # home-manager version — like system.stateVersion, set this once and never change it.
