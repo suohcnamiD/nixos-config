@@ -7,6 +7,8 @@
     ./ssh.nix
     ./git.nix
     ./sops.nix
+    ./development.nix
+    ./gradle.nix
   ];
 
   xdg.configFile."micro/settings.json" = {
