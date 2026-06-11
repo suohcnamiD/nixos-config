@@ -38,5 +38,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781122795.4638653
+    },
+    "c3243e53-6d8a-438b-a01b-f68ad7f4275a": {
+        "id": "c3243e53-6d8a-438b-a01b-f68ad7f4275a",
+        "name": "Open Stachetopia in IDEA",
+        "keyword": "dev",
+        "cmd": "idea ~/Development/Stachetopia/Java/stachetopia",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781164511.6499681
     }
 }
