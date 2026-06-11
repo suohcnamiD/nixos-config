@@ -10,4 +10,16 @@
 			email = "veryverychovy@proton.me";
 		};
 	};
+
+	sops.secrets = {
+	  	"git/github/username" = {
+	  	  	owner = "chovy";
+	  	  	mode = "0600";
+	 	};
+
+	 	"git/github/token" = {
+	 	  	owner = "chovy";
+	 	  	mode = "0600";
+	 	};
+	};
 }

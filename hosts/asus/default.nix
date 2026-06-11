@@ -14,37 +14,6 @@
     # Pointing at a directory automatically loads the default.nix inside it.
     ../../modules/nixos
   ];
-
-  sops.secrets."ssh/stachetopia/key" = {
-  	path = "/home/chovy/.ssh/stachetopia";
-  	owner = "chovy";
-  	mode = "0600";
-  };
-
-  
-    
-   sops.secrets."ssh/stachetopia/host" = {
-   	owner = "chovy";
-   	mode = "0600";
-   };
-  
-  sops.secrets."ssh/stachetopia/user" = {
-  	owner = "chovy";
-  	mode = "0600";
-  };
-  
-  sops.secrets."git/github/username" = {
-  	owner = "chovy";
-  	mode = "0600";
-  };
-  
-  sops.secrets."git/github/token" = {
-  	owner = "chovy";
-  	mode = "0600";
-  };
-
-  sops.age.keyFile = "/home/chovy/.config/sops/age/keys.txt";
-  sops.defaultSopsFile = ../../secrets/secrets.yaml;
   
   # ── Boot ──────────────────────────────────────────────────────────────────
   boot.loader.systemd-boot.enable      = true;
