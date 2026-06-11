@@ -6,6 +6,7 @@
     jdk25
     jdk21
 	gradle
+	bruno
   ];
   environment.variables.EDITOR = "micro";
 }
