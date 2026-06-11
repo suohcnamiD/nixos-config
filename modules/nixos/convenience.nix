@@ -5,5 +5,8 @@
     python313Packages.simpleeval
     python313Packages.pint
     chezmoi
+    geary
+    protonmail-bridge
+    gnomeExtensions.gsconnect
   ];
 }
