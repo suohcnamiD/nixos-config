@@ -78,5 +78,45 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781166378.0822837
+    },
+    "5e1793a8-4fe3-4bf4-8d4e-140b40a7f8c5": {
+        "id": "5e1793a8-4fe3-4bf4-8d4e-140b40a7f8c5",
+        "name": "Skript (Analysis)",
+        "keyword": "analysis",
+        "cmd": "papers \"/home/chovy/Studying/DHBW/Semester 2/Analysis/analysis_komplett.pdf\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781244977.995484
+    },
+    "987754b0-e691-40f2-81e2-fa1e7f89c445": {
+        "id": "987754b0-e691-40f2-81e2-fa1e7f89c445",
+        "name": "Book (Algorithms)",
+        "keyword": "algo",
+        "cmd": "papers \"/home/chovy/Studying/DHBW/Semester 2/Theoretische Informatik/Cormen Introduction to Algorithms.pdf\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781245031.5690417
+    },
+    "319cff54-27b1-40c1-bde8-c7d40d8ce026": {
+        "id": "319cff54-27b1-40c1-bde8-c7d40d8ce026",
+        "name": "Stachetopia Repository",
+        "keyword": "repo",
+        "cmd": "http://dev.home.stachetopia/stachetopia/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1781251198.2145576
+    },
+    "56586674-ce25-4992-884c-913a6af44c8b": {
+        "id": "56586674-ce25-4992-884c-913a6af44c8b",
+        "name": "Reboot",
+        "keyword": "reboot",
+        "cmd": "reboot",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781251847.5451288
     }
 }

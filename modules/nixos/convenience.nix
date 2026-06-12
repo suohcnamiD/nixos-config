@@ -8,6 +8,7 @@
     geary
     protonmail-bridge
     gnomeExtensions.gsconnect
+    gnomeExtensions.grand-theft-focus
   ];
 
   programs.kdeconnect = {
