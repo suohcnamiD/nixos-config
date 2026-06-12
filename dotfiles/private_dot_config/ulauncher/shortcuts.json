@@ -118,5 +118,35 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781251847.5451288
+    },
+    "ce1972ba-1b3c-4337-aa2e-bf3bb9a7956a": {
+        "id": "ce1972ba-1b3c-4337-aa2e-bf3bb9a7956a",
+        "name": "Stachetopia Library",
+        "keyword": "lib",
+        "cmd": "http://dev.home.stachetopia/stachetopia/-/packages/maven/net.stachetopia.library:%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1781252053.892456
+    },
+    "f8ba6b0a-c354-4197-803c-7a1d285da627": {
+        "id": "f8ba6b0a-c354-4197-803c-7a1d285da627",
+        "name": "Stachetopia Image",
+        "keyword": "img",
+        "cmd": "http://dev.home.stachetopia/stachetopia/-/packages/container/%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1781252197.9787579
+    },
+    "bfe261f7-f1c1-4bc5-92e7-98cdbe92f857": {
+        "id": "bfe261f7-f1c1-4bc5-92e7-98cdbe92f857",
+        "name": "YouTube",
+        "keyword": "yt",
+        "cmd": "https://www.youtube.com/results?search_query=%s",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1781253283.382527
     }
 }
