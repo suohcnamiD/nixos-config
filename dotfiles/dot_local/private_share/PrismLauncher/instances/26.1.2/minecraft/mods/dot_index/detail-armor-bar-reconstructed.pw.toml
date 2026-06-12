@@ -1,0 +1,35 @@
+filename = 'DetailArmorBarReconstructed-5.2.1+26.1-SNAPSHOT-fabric.jar'
+name = 'Detail Armor Bar Reconstructed'
+side = 'client'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [
+    '26.1 Pre-Release  2',
+    '26.1 Pre-Release  3',
+    '26.1 rc 1',
+    '26.1 rc 2',
+    '26.1 rc 3',
+    '26.1-pre-2',
+    '26.1-pre-3',
+    '26.1-rc-1',
+    '26.1-rc-2',
+    '26.1-rc-3',
+    '26.1',
+    '26.1.1',
+    '26.1.2'
+]
+x-prismlauncher-release-type = 'release'
+x-prismlauncher-version-number = '5.2.1+26.1-fabric'
+
+[download]
+hash = '47f1e80e98dd3d2e156df7f4563e8d62391a8447da639e070cd9743fe554995d1a9fda2220b3257bd0f4770cea000ba50cea08ad22432238479d0f8c6d615a17'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Si9Uim4y/versions/gEidvpTt/DetailArmorBarReconstructed-5.2.1%2B26.1-SNAPSHOT-fabric.jar'
+
+[update.modrinth]
+mod-id = 'Si9Uim4y'
+version = 'gEidvpTt'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'P7dR8mSH'
+type = 'REQUIRED'
