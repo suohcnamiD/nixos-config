@@ -1,5 +1,11 @@
 { config, pkgs, ... }: {
   virtualisation.docker.enable = true;
+
+  
+  virtualisation.docker.daemon.settings = {
+      insecure-registries = [ "dev.home.stachetopia" ];
+  };
+  
   environment.systemPackages = with pkgs; [ 
     pkgs.jetbrains.idea
     vscodium

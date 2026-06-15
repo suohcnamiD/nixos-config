@@ -14,6 +14,19 @@
 	"ssh/stachetopia/host" = {
 	  	mode = "0600";
   	};
+
+  	"ssh/oracle/key" = {
+  	  	path = "/home/chovy/.ssh/oracle";
+  	  	mode = "0600";
+  	};
+  	
+  	"ssh/oracle/user" = {
+  	  	mode = "0600";
+	};
+
+	"ssh/oracle/host" = {
+	  	mode = "0600";
+  	};
   };
 
   sops.templates."ssh-identities".content = ''
@@ -22,6 +35,11 @@
 	  User ${config.sops.placeholder."ssh/stachetopia/user"}
 	  IdentityFile ${config.sops.secrets."ssh/stachetopia/key".path}
 	  AddKeysToAgent yes
+ 	Host oracle
+ 	  HostName ${config.sops.placeholder."ssh/oracle/host"}
+ 	  User ${config.sops.placeholder."ssh/oracle/user"}
+ 	  IdentityFile ${config.sops.secrets."ssh/oracle/key".path}
+ 	  AddKeysToAgent yes
   '';
   
   programs.ssh = {
