@@ -14,6 +14,7 @@
     jdk21
 	gradle_9
 	bruno
+	elmPackages.nodejs
   ];
   environment.variables.EDITOR = "micro";
 
