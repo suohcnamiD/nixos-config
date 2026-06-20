@@ -168,5 +168,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781609917.3136973
+    },
+    "4634e898-0faa-4a91-8d56-050ccba5b510": {
+        "id": "4634e898-0faa-4a91-8d56-050ccba5b510",
+        "name": "Kdenlive with GPU offload",
+        "keyword": "edit",
+        "cmd": "bash /home/chovy/nixos-config/dotfiles/bin/kdenlive.sh",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781947420.5111167
     }
 }

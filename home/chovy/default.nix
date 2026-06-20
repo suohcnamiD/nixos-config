@@ -11,6 +11,7 @@
     ./convenience.nix
     ./appearance.nix
     ./gradle.nix
+    ./editing.nix
   ];
 
   xdg.configFile."micro/settings.json" = {

@@ -10,6 +10,7 @@
     ./security.nix
     ./convenience.nix 
     ./gaming.nix
+    ./hardware.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
