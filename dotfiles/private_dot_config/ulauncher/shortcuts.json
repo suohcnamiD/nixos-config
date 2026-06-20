@@ -148,5 +148,25 @@
         "is_default_search": false,
         "run_without_argument": false,
         "added": 1781253283.382527
+    },
+    "3c2d7c06-b59f-481e-8497-b3cec88f6668": {
+        "id": "3c2d7c06-b59f-481e-8497-b3cec88f6668",
+        "name": "Stachetopia Org",
+        "keyword": "stachetopia",
+        "cmd": "http://dev.home.stachetopia/stachetopia",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781459140.2947257
+    },
+    "0e9b3d05-5cde-4d18-86a0-ce1fd4aef5a7": {
+        "id": "0e9b3d05-5cde-4d18-86a0-ce1fd4aef5a7",
+        "name": "Wann Schluss?",
+        "keyword": "schluss",
+        "cmd": "https://dhbw.app/c/KA-TINF25B1",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781609917.3136973
     }
 }

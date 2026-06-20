@@ -6,11 +6,10 @@
     python313Packages.pint
     chezmoi
     geary
-    protonmail-bridge
     gnomeExtensions.gsconnect
     gnomeExtensions.grand-theft-focus
   ];
-
+  
   programs.kdeconnect = {
     enable = true;
     package = pkgs.gnomeExtensions.gsconnect;
