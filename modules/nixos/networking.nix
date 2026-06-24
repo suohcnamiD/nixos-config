@@ -1,9 +1,12 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   services.tailscale = {
   	enable = true;
   	extraSetFlags = [ "--netfilter-mode=nodivert" ];
   };
 
+  environment.systemPackages = with pkgs; [
+  	openconnect
+  ]; 
   
   networking.firewall = {
    	enable = true;

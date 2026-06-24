@@ -11,6 +11,7 @@
     ./convenience.nix 
     ./gaming.nix
     ./hardware.nix
+    ./virtualization.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
@@ -28,6 +29,8 @@
         propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [
           final.python3Packages.pint
           final.python3Packages.simpleeval
+          final.python3Packages.uuid6
+          final.python3Packages.bcrypt
         ];
       });
     })

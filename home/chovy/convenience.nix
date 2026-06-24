@@ -2,6 +2,7 @@
 
 	home.packages = with pkgs; [
 		open-scq30
+		appflowy
 	];
 
 	dconf.settings = {

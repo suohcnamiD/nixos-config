@@ -178,5 +178,45 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1781947420.5111167
+    },
+    "4b13e104-f8aa-4359-a785-557235ee3285": {
+        "id": "4b13e104-f8aa-4359-a785-557235ee3285",
+        "name": "UUID",
+        "keyword": "uuid",
+        "cmd": "python3 -c \"import uuid, subprocess; subprocess.run(['wl-copy'], input=str(uuid.uuid4()).encode())\"",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781960658.1243238
+    },
+    "69adff6d-facf-4452-b0c5-d0802665741b": {
+        "id": "69adff6d-facf-4452-b0c5-d0802665741b",
+        "name": "Encrypt via BCrypt",
+        "keyword": "bcrypt",
+        "cmd": "#!/usr/bin/env bash\nmkpasswd --method=bcrypt_a --rounds=12 \"$1\" | tr -d '\\n' | wl-copy",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1781960968.411078
+    },
+    "52c5924c-afd7-4988-a061-219111610d47": {
+        "id": "52c5924c-afd7-4988-a061-219111610d47",
+        "name": "ISZ VPN",
+        "keyword": "isz",
+        "cmd": "kgx -- bash -c 'sudo openconnect vpn-ac.urz.uni-heidelberg.de'",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1781981827.5554183
+    },
+    "016f05f7-d5d2-4788-94fb-34ed9bbcbd2d": {
+        "id": "016f05f7-d5d2-4788-94fb-34ed9bbcbd2d",
+        "name": "Roblox with GPU",
+        "keyword": "roblox",
+        "cmd": "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia flatpak run org.vinegarhq.Sober",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1782156195.8963645
     }
 }

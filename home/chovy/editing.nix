@@ -4,6 +4,5 @@
 	  inkscape
 	  libreoffice-fresh
 	  frei0r
-	  python3
 	];
 }
