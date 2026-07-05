@@ -8,6 +8,10 @@
     gnomeExtensions.gsconnect
     gnomeExtensions.quick-lang-switch
   ];
+
+  services.flatpak = {
+    packages = [ "io.appflowy.AppFlowy" ];
+  };
   
   programs.kdeconnect = {
     enable = true;

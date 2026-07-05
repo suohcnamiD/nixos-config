@@ -15,7 +15,19 @@
 	"ssh/nomabini/host" = {
 	  	mode = "0600";
   	};
-  
+
+  	"ssh/stachetopia-root/key" = {
+  	  	path = "/home/chovy/.ssh/stachetopia-root";
+  	  	mode = "0600";
+  	};
+  	
+  	"ssh/stachetopia-root/user" = {
+  	  	mode = "0600";
+	};
+
+	"ssh/stachetopia-root/host" = {
+	  	mode = "0600";
+  	};
   
   	"ssh/stachetopia/key" = {
   	  	path = "/home/chovy/.ssh/stachetopia";
@@ -59,6 +71,11 @@
   };
 
   sops.templates."ssh-identities".content = ''
+  	Host stachetopia-root
+  	  HostName ${config.sops.placeholder."ssh/stachetopia-root/host"}
+  	  User ${config.sops.placeholder."ssh/stachetopia-root/user"}
+  	  IdentityFile ${config.sops.secrets."ssh/stachetopia-root/key".path}
+  	  AddKeysToAgent yes
 	Host stachetopia
 	  HostName ${config.sops.placeholder."ssh/stachetopia/host"}
 	  User ${config.sops.placeholder."ssh/stachetopia/user"}

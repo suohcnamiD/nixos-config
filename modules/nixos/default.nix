@@ -12,6 +12,7 @@
     ./gaming.nix
     ./hardware.nix
     ./virtualization.nix
+    ./flatpak.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
