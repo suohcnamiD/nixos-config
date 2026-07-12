@@ -1,4 +1,13 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }: {
+
+  networking.wg-quick.interfaces = {
+    wg0.configFile = "/etc/wireguard/wg0.conf";
+  };
+
+  networking.networkmanager.wifi.powersave = false;
+
+  systemd.services."wg-quick-wg0".wantedBy = lib.mkForce [ ];
+
   services.tailscale = {
   	enable = true;
   	extraSetFlags = [ "--netfilter-mode=nodivert" ];
@@ -6,6 +15,20 @@
 
   environment.systemPackages = with pkgs; [
   	openconnect
+  	seclists
+  	nmap
+  	ffuf
+  	gobuster
+  	feroxbuster
+  	hydra
+  	medusa
+  	masscan
+  	nikto
+  	sqlmap
+  	wfuzz
+  	amass
+  	subfinder
+  	
   ]; 
   
   networking.firewall = {
