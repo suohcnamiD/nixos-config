@@ -19,6 +19,17 @@
   programs.steam = {
     enable = true;
   };
+
+  services.udev.extraRules = ''
+    ATTR{vendor}=="0x10de", TAG+="mutter-device-preferred-primary"
+  '';
+
+  hardware.nvidia.prime = {
+    amdgpuBusId = "PCI:4:0:0";
+    nvidiaBusId = "PCI:1:0:0";
+    offload.enable = true;
+    offload.enableOffloadCmd = true;
+  };
   
   hardware.graphics = {
     enable = true;

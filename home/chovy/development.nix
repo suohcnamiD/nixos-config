@@ -5,6 +5,7 @@
 		dbeaver-bin
 		elmPackages.nodejs
 		android-studio
+		chromium
 	];
 
 	nixpkgs.config.android_sdk.accept_license = true;

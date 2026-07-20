@@ -53,7 +53,7 @@
     };
     
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ulauncher" = {
-      binding = "<Control>space";
+      binding = "<Super>space";
       command = "ulauncher-toggle";
       name = "Open Ulauncher";
     };

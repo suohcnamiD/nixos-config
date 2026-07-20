@@ -218,5 +218,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1782156195.8963645
+    },
+    "3ad85344-6c6e-4aff-a416-49e1b2f00f4a": {
+        "id": "3ad85344-6c6e-4aff-a416-49e1b2f00f4a",
+        "name": "Prism with GPU",
+        "keyword": "mc",
+        "cmd": "nvidia-offload prismlauncher",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1784215045.8020818
     }
 }

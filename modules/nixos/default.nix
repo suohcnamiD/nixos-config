@@ -10,7 +10,6 @@
     ./security.nix
     ./convenience.nix 
     ./gaming.nix
-    ./hardware.nix
     ./virtualization.nix
     ./flatpak.nix
   ];
