@@ -1,6 +1,14 @@
 { config, pkgs, ... }: {
   virtualisation.docker.enable = true;
 
+  boot = {
+    kernelModules = [ "v4l2loopback" ];
+    extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+    extraModprobeConfig = ''
+      options v4l2loopback exclusive_caps=1 card_label="AndroidCam" video_nr=5
+    '';
+  };
+
   nixpkgs.config.android_sdk.accept_license = true;
 
   networking.extraHosts = ''
@@ -23,7 +31,10 @@
   
   environment.systemPackages = with pkgs; [ 
     dnsutils
-    pkgs.jetbrains.idea
+    jetbrains.idea
+    jetbrains.rust-rover
+    rustup
+    rustc
     vscodium
     micro
     jdk25
@@ -31,6 +42,16 @@
 	gradle_9
 	bruno
 	elmPackages.nodejs
+	gcc
+	openapi-generator-cli
+	pkg-config
+	openssl
+	protobuf
+	alsa-plugins
+	scrcpy
+	android-tools
+	v4l-utils
+	gnumake
   ];
   environment.variables.EDITOR = "micro";
 

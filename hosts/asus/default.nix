@@ -74,4 +74,19 @@
   # Set it to the value from your current /etc/nixos/configuration.nix
   # and never change it, even when upgrading NixOS.
   system.stateVersion = "26.05";
+
+  environment.etc."asound.conf".text = ''
+      pcm_type.pulse {
+        lib "${pkgs.alsa-plugins}/lib/alsa-lib/libasound_module_pcm_pulse.so"
+      }
+      ctl_type.pulse {
+        lib "${pkgs.alsa-plugins}/lib/alsa-lib/libasound_module_ctl_pulse.so"
+      }
+      pcm.!default {
+        type pulse
+      }
+      ctl.!default {
+        type pulse
+      }
+    '';
 }

@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
 
   imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
   
@@ -11,6 +11,12 @@
     open = false;
   };
 
+  services.asusd = {
+	  enable = true;
+  };
+	
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+	
   programs.gamescope.enable = true;
   
   services.xserver.videoDrivers = [ "nvidia" ];

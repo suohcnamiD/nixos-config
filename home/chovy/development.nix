@@ -6,6 +6,9 @@
 		elmPackages.nodejs
 		android-studio
 		chromium
+		cmake
+		buf
+		go
 	];
 
 	nixpkgs.config.android_sdk.accept_license = true;

@@ -228,5 +228,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1784215045.8020818
+    },
+    "c5c6381a-a101-4532-8e5c-c487dea2da13": {
+        "id": "c5c6381a-a101-4532-8e5c-c487dea2da13",
+        "name": "DaVinci Resolve with GPU",
+        "keyword": "resolve",
+        "cmd": "nvidia-offload davinci-resolve",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1786282283.6402156
     }
 }

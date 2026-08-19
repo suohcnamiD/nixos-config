@@ -12,6 +12,9 @@
     ./gaming.nix
     ./virtualization.nix
     ./flatpak.nix
+    ./ai.nix
+    ./rust-dev.nix
+    ./printing.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
