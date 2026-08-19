@@ -54,6 +54,10 @@
           PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
           OPENSSL_DIR     = "${pkgs.openssl.dev}";
           OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
+          shellHook = ''
+            rustup toolchain install stable --no-self-update
+            rustup default stable
+          '';
         };
 
         jvm = pkgs.mkShell {
