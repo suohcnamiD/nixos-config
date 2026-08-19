@@ -15,6 +15,11 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, sops-nix, ... }@inputs:
@@ -49,15 +54,13 @@
       };
 
       devShells.${system} = {
-        rust = pkgs.mkShell {
-          buildInputs = with pkgs; [ rustup pkg-config openssl ];
+        rust = let
+          toolchain = inputs.fenix.packages.${system}.stable.toolchain;
+        in pkgs.mkShell {
+          buildInputs = [ toolchain pkgs.pkg-config pkgs.openssl ];
           PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
           OPENSSL_DIR     = "${pkgs.openssl.dev}";
           OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
-          shellHook = ''
-            rustup toolchain install stable --no-self-update
-            rustup default stable
-          '';
         };
 
         jvm = pkgs.mkShell {

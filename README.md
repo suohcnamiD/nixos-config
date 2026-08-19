@@ -58,7 +58,7 @@ If you want to just persist your current system changes of a file into the chezm
 Dev shells provide per-project tool environments that activate automatically when you `cd` into a project folder and deactivate when you leave. The system stays lean — tools only exist when you need them.
 
 ## Available shells
-- `#rust` — `rustup`, `pkg-config`, `openssl` + all required env vars
+- `#rust` — `rustc`, `cargo`, `clippy`, `rustfmt`, `pkg-config`, `openssl` (pinned stable via fenix)
 - `#jvm` — `jdk21`, `jdk25`, `gradle_9`, `JAVA_HOME`
 - `#node` — `nodejs`
 
