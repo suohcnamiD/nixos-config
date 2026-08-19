@@ -6,6 +6,7 @@
 
   networking.networkmanager.wifi.powersave = false;
 
+  # Intentionally not auto-started — run `systemctl start wg-quick-wg0` when needed.
   systemd.services."wg-quick-wg0".wantedBy = lib.mkForce [ ];
 
   services.tailscale = {

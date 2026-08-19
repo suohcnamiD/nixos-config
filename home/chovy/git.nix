@@ -15,12 +15,9 @@
   };
 
   sops.secrets = {
-    "git/github/username" = {
-      mode = "0600";
-    };
-
-    "git/github/token" = {
-      mode = "0600";
-    };
+    "git/github/username" = { mode = "0600"; };
+    "git/github/token"    = { mode = "0600"; };
+    "git/forgejo/username" = { mode = "0600"; };
+    "git/forgejo/token"    = { mode = "0600"; };
   };
 }

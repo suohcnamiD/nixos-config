@@ -54,6 +54,35 @@ Commit and push afterwards.
 
 If you want to just persist your current system changes of a file into the chezmoi repo, just use `chezmoi add` on it again. If the file is a template, you have to use `chezmoi merge` though - refer to chezmoi docs.
 
+# Dev Shells
+Dev shells provide per-project tool environments that activate automatically when you `cd` into a project folder and deactivate when you leave. The system stays lean — tools only exist when you need them.
+
+## Available shells
+- `#rust` — `rustup`, `pkg-config`, `openssl` + all required env vars
+- `#jvm` — `jdk21`, `jdk25`, `gradle_9`, `JAVA_HOME`
+- `#node` — `nodejs`
+
+## Setup (once per project)
+1. Create a `.envrc` file in your project root:
+   ```bash
+   use flake /home/chovy/nixos-config#rust   # or #jvm
+   ```
+2. Allow it once:
+   ```bash
+   direnv allow
+   ```
+
+From then on, `cd` into the folder → tools appear. `cd` out → they disappear.
+
+## Adding a new shell
+Add a new entry under `devShells.${system}` in `flake.nix`:
+```nix
+myshell = pkgs.mkShell {
+  buildInputs = with pkgs; [ sometool ];
+};
+```
+Then reference it in your project's `.envrc` as `use flake /home/chovy/nixos-config#myshell`.
+
 # Note on SOPS secrets
 If a dotfile has to access SOPS secrets - `sops-nix` decrypts and loads them automatically into `/run/secrets/...` (check for .nix files regarding secrets). To use them in a chezmoi file, you:
 

@@ -2,25 +2,25 @@
   imports = [
     ./appearance.nix 
     ./development.nix
+    ./docker.nix
     ./gnome.nix
     ./browser.nix
     ./networking.nix
     ./launcher.nix
     ./social.nix
     ./security.nix
-    ./convenience.nix 
+    ./desktop.nix
     ./gaming.nix
     ./virtualization.nix
     ./flatpak.nix
     ./ai.nix
-    ./rust-dev.nix
     ./printing.nix
+    ./media.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
-    curl 
+    curl
     git
-    gst_all_1.gstreamer
     wl-clipboard
     libnotify
   ];
@@ -38,6 +38,11 @@
       });
     })
   ];
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 
   # Fix for copilot in IDEA not working - something with unpatched dynamic binaries
   programs.nix-ld.enable = true;

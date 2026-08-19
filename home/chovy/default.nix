@@ -37,9 +37,6 @@
   # home-manager version — like system.stateVersion, set this once and never change it.
   home.stateVersion = "26.05";
 
-  services.mako.enable = true;
-
-
   home.sessionVariables = {
   	XDG_DATA_DIRS = "/run/current-system/sw/share:$XDG_DATA_DIRS";
   };

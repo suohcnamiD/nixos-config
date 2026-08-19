@@ -3,12 +3,12 @@
   imports = [
     # Load the hardware config that was auto-generated at install time.
     # This path is relative to THIS file, so ./hardware.nix means
-    # hosts/laptop/hardware.nix — which is in the same directory.
+    # hosts/asus/hardware.nix — which is in the same directory.
     ./hardware.nix
 
     # Load modules/nixos/default.nix (the index file for the nixos modules folder).
     # The path ../../modules/nixos is relative to THIS file:
-    #   start at hosts/laptop/
+    #   start at hosts/asus/
     #   go up two levels to ~/nixos-config/
     #   then down into modules/nixos/
     # Pointing at a directory automatically loads the default.nix inside it.
@@ -20,7 +20,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # ── Networking ────────────────────────────────────────────────────────────
-  # This must exactly match the name used in flake.nix (nixosConfigurations.laptop)
+  # This must exactly match the name used in flake.nix (nixosConfigurations.asus)
   networking.hostName              = "asus";
   networking.networkmanager.enable = true;
 
@@ -51,7 +51,7 @@
 
   # ── System packages ───────────────────────────────────────────────────────
   # These are available to all users. Keep this list small.
-  # Personal tools belong in home/alice/laptop.nix instead.
+  # Personal tools belong in home/chovy/ instead.
   environment.systemPackages = with pkgs; [
     git
     wget

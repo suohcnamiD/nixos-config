@@ -1,26 +1,18 @@
-{ inputs, pkgs, ... }: {
-
-  imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
-  
-  services.flatpak = {
-    packages = [ "org.vinegarhq.Sober" ];
-  };
-
+{ pkgs, ... }: {
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
   };
 
   services.asusd = {
-	  enable = true;
+    enable = true;
   };
-	
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-	
-  programs.gamescope.enable = true;
-  
-  services.xserver.videoDrivers = [ "nvidia" ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  programs.gamescope.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   programs.steam = {
     enable = true;
@@ -36,7 +28,7 @@
     offload.enable = true;
     offload.enableOffloadCmd = true;
   };
-  
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
