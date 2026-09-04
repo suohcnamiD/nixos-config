@@ -238,5 +238,15 @@
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1786282283.6402156
+    },
+    "4b6b43af-a2a4-41de-9162-5d61db885f41": {
+        "id": "4b6b43af-a2a4-41de-9162-5d61db885f41",
+        "name": "Uni Heidelberg VPN",
+        "keyword": "unihd",
+        "cmd": "kgx -- sudo openconnect vpn-ac.urz.uni-heidelberg.de",
+        "icon": null,
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1788500104.7920954
     }
 }

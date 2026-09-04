@@ -16,6 +16,7 @@
     ./ai.nix
     ./printing.nix
     ./media.nix
+    ./remote.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
