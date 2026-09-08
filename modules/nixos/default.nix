@@ -17,6 +17,7 @@
     ./printing.nix
     ./media.nix
     ./remote.nix
+    ./sound.nix
   ];
   environment.systemPackages = with pkgs; [
     wget

@@ -2,6 +2,7 @@
 	description = "Chovy's NixOS";
 
 	inputs = {
+	  chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 	  nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 	  nix-flatpak.url = "github:gmodena/nix-flatpak";
 	  home-manager = {
@@ -37,6 +38,7 @@
 	      specialArgs = { inherit inputs pkgs-unstable; };
 	      modules = [
 	        ./hosts/asus
+            inputs.chaotic.nixosModules.default
 	        sops-nix.nixosModules.sops
 	        home-manager.nixosModules.home-manager
 	        {
