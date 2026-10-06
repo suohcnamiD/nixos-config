@@ -95,6 +95,7 @@
               pkgs.libayatana-appindicator
               pkgs.librsvg
               pkgs.lld
+              pkgs.binaryen
             ];
 
             PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:${pkgs.webkitgtk_4_1.dev}/lib/pkgconfig:${pkgs.libayatana-appindicator}/lib/pkgconfig:${pkgs.librsvg.dev}/lib/pkgconfig";

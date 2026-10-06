@@ -4,14 +4,23 @@
     open = false;
   };
 
+  hardware.xone.enable = true;
+
   services.asusd = {
     enable = true;
   };
+
+  services.udev.extraRules = ''
+    ATTR{vendor}=="0x10de", TAG+="mutter-device-preferred-primary"
+    KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"
+  '';
+  users.users.chovy.extraGroups = [ "input" ];
 
   environment.systemPackages = with pkgs; [
     lutris
     egl-wayland
     gamescope_git
+    winetricks
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -26,9 +35,6 @@
 
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json";
 
-  services.udev.extraRules = ''
-    ATTR{vendor}=="0x10de", TAG+="mutter-device-preferred-primary"
-  '';
 
   hardware.nvidia.prime = {
     amdgpuBusId = "PCI:4:0:0";

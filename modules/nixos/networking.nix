@@ -35,7 +35,8 @@
   networking.firewall = {
    	enable = true;
    	trustedInterfaces = [ "tailscale0" ];
- 	allowedUDPPorts = [ config.services.tailscale.port ];
+   	allowedTCPPorts = [ 33691 5002 28084 ];
+ 	allowedUDPPorts = [ config.services.tailscale.port 28084 ];
    	allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
   	allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
   	checkReversePath = "loose";
