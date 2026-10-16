@@ -21,6 +21,7 @@
 	    url = "github:nix-community/fenix";
 	    inputs.nixpkgs.follows = "nixpkgs";
 	  };
+	  claude-code.url = "github:sadjow/claude-code-nix";
 	};
 
 	outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, sops-nix, fenix, ... }@inputs:
@@ -56,11 +57,11 @@
 	    };
 
 	    devShells.${system} = {
-        dioxus = let
-          rustToolchain = fenix.packages.${system}.combine [
-            fenix.packages.${system}.stable.toolchain
-            fenix.packages.${system}.targets.wasm32-unknown-unknown.stable.rust-std
-          ];
+		    dioxus = let
+		        rustToolchain = fenix.packages.${system}.combine [
+		          fenix.packages.${system}.stable.toolchain
+		          fenix.packages.${system}.targets.wasm32-unknown-unknown.stable.rust-std
+		        ];
 	    		wasm-bindgen-cli-127 = pkgs.rustPlatform.buildRustPackage rec {
 	    		  pname = "wasm-bindgen-cli";
 	    		  version = "0.2.127";
@@ -101,6 +102,12 @@
             PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig:${pkgs.webkitgtk_4_1.dev}/lib/pkgconfig:${pkgs.libayatana-appindicator}/lib/pkgconfig:${pkgs.librsvg.dev}/lib/pkgconfig";
             OPENSSL_DIR     = "${pkgs.openssl.dev}";
             OPENSSL_LIB_DIR = "${pkgs.openssl.out}/lib";
+            shellHook = ''
+              mkdir -p ~/.rust-rover/toolchain
+              ln -sfn ${rustToolchain}/bin ~/.rust-rover/toolchain/bin
+              ln -sfn ${rustToolchain}/lib ~/.rust-rover/toolchain/lib
+              export RUST_SRC_PATH="$HOME/.rust-rover/toolchain/lib/rustlib/src/rust/library"
+            '';
           };
 	    
 	      leptos = let
@@ -155,6 +162,14 @@
 
 	      node = pkgs.mkShell {
 	        buildInputs = with pkgs; [ nodejs ];
+	      };
+	      python = pkgs.mkShell {
+	        buildInputs = [
+	          (pkgs.python3.withPackages (ps: [ ps.playwright ps.pandas ps.openpyxl ]))
+	          pkgs.playwright-driver.browsers
+	        ];
+	        PLAYWRIGHT_BROWSERS_PATH = "${pkgs.playwright-driver.browsers}";
+	        PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = "true";
 	      };
 	    };
 	  };

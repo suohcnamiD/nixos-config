@@ -1,7 +1,8 @@
 { pkgs, ...}: {
 
-  home.packages = with pkgs; 
-  [ 
-    prismlauncher
+  home.packages = [
+    (pkgs.prismlauncher.override {
+      additionalLibs = [ pkgs.libGL ];
+    })
   ];
 }

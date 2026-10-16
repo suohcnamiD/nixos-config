@@ -13,11 +13,11 @@
     ./gaming.nix
     ./virtualization.nix
     ./flatpak.nix
-    ./ai.nix
     ./printing.nix
     ./media.nix
     ./remote.nix
     ./sound.nix
+    ./storage.nix
   ];
   environment.systemPackages = with pkgs; [
     wget
